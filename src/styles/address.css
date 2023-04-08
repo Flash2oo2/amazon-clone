@@ -1,0 +1,91 @@
+.address__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    background-color: white;
+    margin-bottom: -12rem;
+}
+
+.address__form>form {
+    height: 40rem;
+}
+
+.address__form>form>h5 {
+    margin-bottom: 5px;
+
+}
+
+.address__form>form>input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 30rem;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.address__add {
+    margin-top: 10px;
+    height: 30px;
+    max-width: 700px;
+    border-radius: 2px;
+    color: #111;
+}
+
+.address_add a {
+    text-decoration: none;
+    color: rgb(40, 38, 38);
+}
+
+.address_list div {
+    background-color: white;
+}
+
+.address_details h4 {
+    margin: 0.2rem 1rem;
+    font-family: 'Amazon Ember', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.address_page {
+    margin: 5rem 12rem;
+}
+
+.address_list {
+    display: flex;
+    align-items: row;
+
+    flex-flow: row wrap;
+    margin-top: 1rem;
+
+
+}
+
+.address_list>div {
+
+    margin-top: 10px;
+    width: 300px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    padding: 0rem 1rem;
+    justify-content: center;
+    border: 1px solid rgb(186, 185, 185);
+    border-radius: 1rem;
+
+
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.address_add {
+    border: 1px dashed rgb(186, 185, 185) !important;
+    align-items: center;
+}

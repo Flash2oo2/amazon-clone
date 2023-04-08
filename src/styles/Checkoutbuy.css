@@ -1,0 +1,213 @@
+body {
+    background-color: white;
+
+}
+
+.checkoutbuy {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+    padding-bottom: 10rem;
+}
+
+.checkout__header {
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -50px 36px -28px inset;
+
+}
+
+
+.checkoutbuy__headermain {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.checkoutbuy__headermain h1 {
+    font-weight: 400;
+    font-size: 28px;
+    font-weight: normal;
+
+}
+
+.checkoutbuy__logo {
+    width: 100px;
+    margin: 0 20px;
+
+    margin-top: 18px;
+    object-fit: contain;
+}
+
+.checkoutbuy__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+
+}
+
+.checkoutbuy__col1 {
+    width: 50%;
+}
+
+.checkoutbuy__col2 {
+
+    width: 20%;
+    border: 1px solid rgb(173, 168, 168);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.checkoutbuy__col1__title {
+    color: #c45500 !important;
+    font-size: 18px;
+
+}
+
+.checkoutbuy__data {
+    border: 1px solid rgb(173, 168, 168);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.checkoutbuy__addaddress a {
+    text-decoration: none;
+}
+
+.checkoutbuy__addaddress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.checkoutbuy__addaddress h4 {
+    font-size: 14px;
+    color: #007185;
+
+}
+
+
+
+.checkoutbuy__addaddress :hover {
+    color: #c45500 !important;
+    cursor: pointer !important;
+}
+
+.checkoutbuy__use {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    border-radius: .75rem;
+
+}
+
+.checkoutbuy_topbutton {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: .75rem;
+}
+
+.checkoutbuy_toptext {
+    margin: .3rem 1.25rem;
+    margin-bottom: .5rem;
+    font-size: 12px;
+    text-align: center;
+}
+
+.checkoutbuy__summary {
+    margin: 1rem .5rem;
+    font-size: 22px;
+    color: rgb(15, 17, 17);
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.25rem 0.5rem;
+}
+
+.space-between h5 {
+    font-weight: 200;
+    color: #414144;
+}
+
+.checkoutbuy__ordertotal {
+    color: #c45500 !important;
+    font-size: 22px;
+}
+
+.checkoutbuy__payment {
+    margin-top: 1rem;
+    margin-left: 13%;
+    margin-right: 20%;
+    width: 45%;
+}
+
+.checkoutbuy__methods {
+    border: 1px solid rgb(173, 168, 168);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.images img {
+    width: 40px;
+    margin: 0.2rem 0.4rem;
+}
+
+.card__moretext {
+    margin-left: 2rem;
+    margin-top: -0.5rem;
+}
+
+.card__moretext h3 {
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+}
+
+.checkoutbuy__addressdata h4 {
+    font-size: 16px;
+}
+
+.checkoutbuy__edit {
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+
+}
+
+.checkoutbuy__edit:hover {
+    cursor: pointer;
+
+}
+
+.checkoutbuy__edit h4 {
+    color: #007185;
+    font-size: 14px;
+}

@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
+import Delayed from './Delayed';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <StateProvider initialState={initialState} reducer={reducer} >
+      <Delayed waitBeforeShow={2000}>
+        <App />
+      </Delayed>
+
+
+    </StateProvider>
+
   </React.StrictMode>
 );
 

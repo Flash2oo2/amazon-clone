@@ -1,0 +1,183 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    left: 36px;
+    top: 70px;
+
+}
+
+
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #b8b7ad;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px !important;
+    width: 24px !important;
+    position: absolute !important;
+    left: 405px;
+    top: 12px !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #e2e6e8;
+    position: relative;
+    top: 5px !important;
+
+    left: -8px !important;
+
+    height: 2px !important;
+    width: 24px !important;
+
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    width: 600px !important;
+    left: -28px;
+    top: 0;
+
+}
+
+/* General sidebar styles */
+.bm-menu {
+    width: 400px !important;
+    background: whitesmoke;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.8) !important;
+    position: relative;
+    top: 0;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+
+    color: black !important;
+    font-family: "Amazon Ember", Arial, sans-serif !important;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.2s;
+    border: none !important;
+}
+
+.bm-item:hover {
+    color: #ffffff;
+}
+
+.menu-item {
+    color: black;
+}
+
+.Sidebar__login {
+    background-color: #232f3e;
+    position: relative;
+    top: -60px;
+    width: 316px;
+    margin-left: -15px;
+    height: 50px;
+    padding-left: 40px;
+    color: white !important;
+    padding-top: 5px;
+
+}
+
+.Sidebar__login a {
+    border: none;
+}
+
+.Sidebar__login a:hover {
+    border: none;
+}
+
+.Sidebar__login span {
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.Sidebar__login svg {
+    position: relative;
+    top: 5px;
+}
+
+.Sidebar__items {
+    position: relative;
+    top: -50px;
+    padding-bottom: 50px;
+}
+
+.Sidebar__items>div {
+    margin-bottom: 30px;
+}
+
+.Sidebar__items h3 {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.Sidebar__links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Sidebar__links a {
+    text-decoration: none !important;
+    color: black !important;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px !important;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+
+
+.Sidebar__links a:hover {
+    background-color: rgba(148, 147, 147, 0.3);
+    border: none;
+}

@@ -1,0 +1,40 @@
+.productcard {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    margin: 1%;
+    width: 80%;
+    border-radius: 5px;
+    padding-top: 30px;
+    margin-left: 100px;
+
+
+}
+
+.productcard__imageContainer {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.productcard__image {
+
+    height: 240px;
+    width: fit-content;
+    max-width: 360px;
+    margin: 20px;
+
+}
+
+.productcard a {
+    text-decoration: none;
+    color: #0F1111;
+}
+
+.productcard a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #f0c14b;
+
+}

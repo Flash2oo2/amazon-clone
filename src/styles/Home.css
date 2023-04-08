@@ -1,0 +1,44 @@
+.home {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.home__main {
+    margin-top: -10em;
+    position: relative;
+}
+
+@media (min-width:1000px) {
+    .home__main {
+        margin-top: -15em;
+    }
+}
+
+@media (min-width:1400px) {
+    .home__main {
+        margin-top: -20em;
+    }
+}
+
+.home__image {
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: -1;
+    margin-bottom: -150px;
+}
+
+
+
+.home__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    z-index: 1;
+    margin-right: 5px;
+    margin-left: 5px;
+
+
+}

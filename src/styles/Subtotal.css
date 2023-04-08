@@ -1,0 +1,14 @@
+.subtotal {
+    padding: 10px;
+
+}
+
+.checkout__button {
+    padding: 8px;
+    margin: 10px;
+    width: 90%;
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 12px;
+}

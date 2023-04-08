@@ -1,0 +1,111 @@
+.header {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    height: 4rem;
+    z-index: 100;
+}
+
+.header__logo {
+    width: 100px;
+    margin: 0 20px;
+
+    margin-top: 18px;
+    object-fit: contain;
+}
+
+
+.header__address {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.header__address a {
+    text-decoration: none;
+}
+
+.header__address__body>p {
+    color: white;
+}
+
+
+
+.header__search {
+    display: flex;
+    flex: 1;
+
+}
+
+
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 80%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    color: black;
+    background-color: #cd904d;
+
+}
+
+.header__searchIcon:hover {
+    background-color: #ee902a;
+
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__optionLineOne {
+    font-size: 12px;
+
+}
+
+.header__optionLineTwo {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.header__productCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.onhover {
+    border: 1px solid #131921;
+
+}
+
+.onhover:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+}

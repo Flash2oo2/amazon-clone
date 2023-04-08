@@ -1,0 +1,38 @@
+.productcart {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+}
+
+.productcart__image {
+    object-fit: contain;
+    width: 160px;
+    height: 160px;
+    border: 1px solid #ccc;
+
+
+}
+
+.productcart___title {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.productcart__info {
+    padding-left: 20px;
+}
+
+.productcart__addorremove {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80px;
+    margin: 0.25rem 0rem;
+
+}
+
+.productcart__addorremove {}
