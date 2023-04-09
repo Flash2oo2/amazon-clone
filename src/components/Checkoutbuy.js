@@ -186,7 +186,7 @@ export default function Checkoutbuy() {
                                 </hr>
 
 
-                                <button className="checkoutbuy__use hover__button " onClick={toggle}>Use this address</button>
+                                {address.length !== 0 && <button className="checkoutbuy__use hover__button " onClick={toggle}>Use this address</button>}
                             </>) :
                                 (
                                     <>
@@ -256,96 +256,98 @@ export default function Checkoutbuy() {
                 </div>
             </div >
 
-            <div className="checkoutbuy__payment">
-                <h2 className="checkoutbuy__col1__title">Select a payment method</h2>
-                <div className="checkoutbuy__methods">
-                    <h2>Payment methods</h2>
-                    <hr></hr>
-                    <br></br>
+            {address.length !== 0 &&
+                <div className="checkoutbuy__payment">
+                    <h2 className="checkoutbuy__col1__title">Select a payment method</h2>
+                    <div className="checkoutbuy__methods">
+                        <h2>Payment methods</h2>
+                        <hr></hr>
+                        <br></br>
 
-                    <PayPalScriptProvider
-                        options={{
-                            "client-id": "Aac62jF_477r4JM5xgY7JS79LnYmLeiGhQiDT30--layuVlJLUKk6Ni09fadLRNDU7NIteKYXlb0bEIk",
-                            components: "buttons,marks,funding-eligibility"
-                        }}
-                    >
-                        <form style={{ minHeight: "200px", }}>
-                            {fundingSources.map((fundingSource) => (
-                                <label className="mark" key={fundingSource} style={{ display: "flex", flexDirection: "row", marginBottom: "1rem" }}>
+                        <PayPalScriptProvider
+                            options={{
+                                "client-id": "Aac62jF_477r4JM5xgY7JS79LnYmLeiGhQiDT30--layuVlJLUKk6Ni09fadLRNDU7NIteKYXlb0bEIk",
+                                components: "buttons,marks,funding-eligibility"
+                            }}
+                        >
+                            <form style={{ minHeight: "200px", }}>
+                                {fundingSources.map((fundingSource) => (
+                                    <label className="mark" key={fundingSource} style={{ display: "flex", flexDirection: "row", marginBottom: "1rem" }}>
+                                        <input
+                                            defaultChecked={
+                                                fundingSource === selectedFundingSource
+                                            }
+                                            onChange={onChange}
+                                            type="radio"
+                                            name="fundingSource"
+                                            value={fundingSource}
+                                        />
+                                        <PayPalMarks fundingSource={fundingSource} />
+
+                                    </label>
+                                ))}
+                                <label className="mark" key="paylater">
                                     <input
                                         defaultChecked={
-                                            fundingSource === selectedFundingSource
+                                            "paylater" === selectedFundingSource
                                         }
                                         onChange={onChange}
                                         type="radio"
                                         name="fundingSource"
-                                        value={fundingSource}
+                                        value="paylater"
                                     />
-                                    <PayPalMarks fundingSource={fundingSource} />
-
+                                    Cash On Delivery/Pay On Delivery
                                 </label>
-                            ))}
-                            <label className="mark" key="paylater">
-                                <input
-                                    defaultChecked={
-                                        "paylater" === selectedFundingSource
-                                    }
-                                    onChange={onChange}
-                                    type="radio"
-                                    name="fundingSource"
-                                    value="paylater"
-                                />
-                                Cash On Delivery/Pay On Delivery
-                            </label>
 
 
-                        </form>
-                        <br />
-                        {selectedFundingSource !== "paylater" &&
-                            < PayPalButtons
-                                fundingSource={selectedFundingSource}
-                                style={style}
-                                forceReRender={[selectedFundingSource, style, amount, currency]}
-                                createOrder={(data, actions) => {
-                                    return actions.order
-                                        .create({
-                                            purchase_units: [
-                                                {
-                                                    amount: {
-                                                        currency_code: currency, // Here change the currency if needed
-                                                        value: id == 0 ? getCartTotal(basket) : items && items.price // Here change the amount if needed
+                            </form>
+                            <br />
+                            {selectedFundingSource !== "paylater" &&
+                                < PayPalButtons
+                                    fundingSource={selectedFundingSource}
+                                    style={style}
+                                    forceReRender={[selectedFundingSource, style, amount, currency]}
+                                    createOrder={(data, actions) => {
+                                        return actions.order
+                                            .create({
+                                                purchase_units: [
+                                                    {
+                                                        amount: {
+                                                            currency_code: currency, // Here change the currency if needed
+                                                            value: id == 0 ? getCartTotal(basket) : items && items.price // Here change the amount if needed
+                                                        },
+
                                                     },
 
-                                                },
 
+                                                ],
+                                                "application_context": {
 
-                                            ],
-                                            "application_context": {
+                                                    "shipping_preference": "NO_SHIPPING"
 
-                                                "shipping_preference": "NO_SHIPPING"
+                                                }
+                                            })
+                                            .then((orderId) => {
+                                                // Your code here after create the order
+                                                return orderId
+                                            });
+                                    }}
+                                    onApprove={(data, actions) => {
 
-                                            }
-                                        })
-                                        .then((orderId) => {
-                                            // Your code here after create the order
-                                            return orderId
+                                        return actions.order.capture().then(function (details) {
+                                            // Your code here after approve the transaction
+                                            navigate(`/checkout/success/${data.orderID}`)
+                                            console.log(data);
+
                                         });
-                                }}
-                                onApprove={(data, actions) => {
+                                    }}
+                                />
+                            }
 
-                                    return actions.order.capture().then(function (details) {
-                                        // Your code here after approve the transaction
-                                        navigate(`/checkout/success/${data.orderID}`)
-                                        console.log(data);
-
-                                    });
-                                }}
-                            />
-                        }
-
-                    </PayPalScriptProvider>
+                        </PayPalScriptProvider>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
 
 
