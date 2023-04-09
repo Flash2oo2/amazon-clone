@@ -25,4 +25,6 @@
 
 }
 
-.products__image {}
+.products__image {
+  width: 600px
+}

@@ -4,10 +4,12 @@ import '../styles/Checkout.css'
 import { useStateValue } from "../StateProvider";
 import ProductCart from './ProductCart'
 import { writeUserData } from "../utils";
+import { Box, CircularProgress } from "@mui/material";
 import StripeCheckout from "react-stripe-checkout";
 export default function Checkout() {
 
     const [{ basket, loggedinuser }] = useStateValue();
+    const [trigger, setTrigger] = useState(false);
 
 
     const [toggle, setToggle] = useState(0);
@@ -22,8 +24,10 @@ export default function Checkout() {
     const [newBasket, setNewBasket] = useState([]);
 
     useEffect(() => {
+        setTrigger(false)
         feedBasket();
         console.log(newBasket)
+
     }, [basket])
 
     const feedBasket = () => {
@@ -49,6 +53,7 @@ export default function Checkout() {
                 };
 
                 temp.push(newItem);
+                setTrigger(true);
                 return {}
             }
 
@@ -61,6 +66,16 @@ export default function Checkout() {
         setNewBasket(temp);
         console.log(newBasket)
     }
+
+    if (!trigger)
+        return (<Box sx={{
+            marginLeft: "45%",
+            marginTop: "10%",
+
+        }}>
+            <CircularProgress size={100} sx={{ color: "#232f3e" }} />
+        </Box >)
+
 
     return (
         <div>

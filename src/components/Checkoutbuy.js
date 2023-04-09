@@ -13,6 +13,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Button } from "@mui/material";
 import { PayPalScriptProvider, PayPalButtons, BraintreePayPalButtons, PayPalMarks } from "@paypal/react-paypal-js";
 import EditIcon from '@mui/icons-material/Edit';
+import { Box, CircularProgress } from "@mui/material";
 
 
 const amount = "2";
@@ -31,7 +32,7 @@ export default function Checkoutbuy() {
     const [value, setValue] = React.useState(0);
     const [paymentMethod, setPaymentMethod] = useState("");
     const [items, setItems] = useState();
-
+    const [trigger, setTrigger] = useState(false);
 
 
 
@@ -82,12 +83,20 @@ export default function Checkoutbuy() {
                     navigate("/login")
 
             }, "3000")
-            if (id !== 0)
+            if (id !== 0) {
                 fetchData();
+
+            }
+
+            setTimeout(() => {
+                setTrigger(true);
+            }, "2000")
+
 
         }
         return () => {
             isSubscribed = false;
+
         }
 
     }, [])
@@ -96,6 +105,16 @@ export default function Checkoutbuy() {
         setIsAddress(false)
 
     }
+
+
+    if (!trigger)
+        return (<Box sx={{
+            marginLeft: "45%",
+            marginTop: "10%",
+
+        }}>
+            <CircularProgress size={100} sx={{ color: "#232f3e" }} />
+        </Box >)
 
     // useEffect(() => {
     //     if (!loggedinuser)

@@ -9,18 +9,21 @@ import { GlassMagnifier } from "react-image-magnifiers";
 import "../styles/ProductInfo.css"
 import { useStateValue } from "../StateProvider";
 import { writeUserData } from "../utils";
+import { Box, CircularProgress } from "@mui/material";
 
 
 function ProductInfo() {
     const [{ basket, loggedinuser }, dispatch] = useStateValue()
-
+    const [trigger, setTrigger] = useState(false);
     const navigate = useNavigate();
     const [img, setImg] = useState([]);
 
     const { id } = useParams();
     const [item, setItem] = useState([]);
     const fetchData = async () => {
-
+        setTimeout(() => {
+            setTrigger(true);
+        }, "1000")
         return await fetch(`https://dummyjson.com/products/${id}`)
             .then((response) => response.json())
             .then((data) => {
@@ -127,6 +130,15 @@ function ProductInfo() {
                 </Carousel>
 
                 */
+
+    if (!trigger)
+        return (<Box sx={{
+            marginLeft: "45%",
+            marginTop: "10%",
+
+        }}>
+            <CircularProgress size={100} sx={{ color: "#232f3e" }} />
+        </Box >)
 
     return (
         <div className="productinfo">
