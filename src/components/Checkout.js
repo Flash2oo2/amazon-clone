@@ -26,6 +26,9 @@ export default function Checkout() {
     useEffect(() => {
         setTrigger(false)
         feedBasket();
+        setTimeout(() => {
+            setTrigger(true);
+        }, "1500");
         console.log(newBasket)
 
     }, [basket])
@@ -53,7 +56,7 @@ export default function Checkout() {
                 };
 
                 temp.push(newItem);
-                setTrigger(true);
+
                 return {}
             }
 

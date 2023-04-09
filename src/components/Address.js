@@ -44,7 +44,7 @@ export default function Address(
             <div className="address_list">
 
                 <div className="address_add">
-                    <Link to={`/address/add?user=${loggedinuser.length === 0 ? false : true}`}>
+                    <Link to={`/address/add?user=${loggedinuser ? false : true}`}>
                         <AddIcon color="action" sx={{
                             fontSize: 50
                         }} />

@@ -22,7 +22,7 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={"$"}
             />
-            <Link to={`/checkout/buy/${0}?user=${loggedinuser.length === 0 ? false : true}`}>
+            <Link to={`/checkout/buy/${0}?user=${loggedinuser ? false : true}`}>
                 <button className="checkout__button hover__button">Proceed to Checkout</button>
             </Link>
         </div>
