@@ -11,7 +11,6 @@ export default function Checkout() {
     const [{ basket, loggedinuser }] = useStateValue();
     const [trigger, setTrigger] = useState(false);
 
-
     const [toggle, setToggle] = useState(0);
 
     useEffect(() => {
@@ -24,15 +23,23 @@ export default function Checkout() {
     const [newBasket, setNewBasket] = useState([]);
 
     useEffect(() => {
+        // setTrigger(false)
+        feedBasket();
+        // setTimeout(() => {
+        //     setTrigger(true);
+        // }, "1500");
+        console.log(newBasket)
+
+    }, [basket])
+
+    useEffect(() => {
+
         setTrigger(false)
         feedBasket();
         setTimeout(() => {
             setTrigger(true);
         }, "1500");
-        console.log(newBasket)
-
-    }, [basket])
-
+    }, [])
     const feedBasket = () => {
         let temp = [];
         basket.map((item, i) => {

@@ -15,7 +15,6 @@ export const username = (loggedinuser) => {
 export const logoutUser = (loggedinuser) => {
     if (loggedinuser) {
         auth.signOut();
-
     }
 }
 
