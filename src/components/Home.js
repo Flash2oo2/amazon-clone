@@ -26,7 +26,7 @@ function Home() {
 
                     <img src="https://m.media-amazon.com/images/I/61GnAucagBL._SX3000_.png" alt="" className="home__image" />
                     <img src="https://m.media-amazon.com/images/I/51AQhraI0-L._SX3000_.png" alt="" className="home__image" />
-                    <img src="https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61TD5JLGhIL._SX3000_.jpg" className="home__image" />
+                    {/* <img src="https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61TD5JLGhIL._SX3000_.jpg" className="home__image" /> */}
 
                 </Carousel>
 
@@ -37,65 +37,46 @@ function Home() {
                 <div className="home__row">
 
                     <Product
-                        id='1'
+                        id='123'
                     />
 
                     <Product
-                        id='2'
+                        id='133'
                     />
 
                     <Product
-                        id='3'
-                    />
-
-                </div>
-                <div className="home__row">
-
-                    <Product
-                        id='6'
-                    />
-
-
-
-                    <Product
-                        id='7'
+                        id='127'
                     />
 
                 </div>
                 <div className="home__row">
 
                     <Product
-                        id='60'
+                        id='78'
                     />
 
-                    <Product
-                        id='56'
-                    />
-                    <Product
-                        id='57'
-                    />
+
 
                     <Product
-                        id='58'
+                        id='79'
                     />
 
                 </div>
-
                 <div className="home__row">
 
                     <Product
-                        id='51'
+                        id='85'
                     />
 
                     <Product
-                        id='53'
+                        id='87'
                     />
                     <Product
-                        id='36'
+                        id='163'
                     />
 
                     <Product
-                        id='37'
+                        id='164'
                     />
 
                 </div>
@@ -103,18 +84,37 @@ function Home() {
                 <div className="home__row">
 
                     <Product
-                        id='13'
+                        id='90'
                     />
 
                     <Product
-                        id='18'
+                        id='92'
                     />
                     <Product
-                        id='19'
+                        id='186'
                     />
 
                     <Product
-                        id='16'
+                        id='189'
+                    />
+
+                </div>
+
+                <div className="home__row">
+
+                    <Product
+                        id='99'
+                    />
+
+                    <Product
+                        id='106'
+                    />
+                    <Product
+                        id='107'
+                    />
+
+                    <Product
+                        id='191'
                     />
 
                 </div>

@@ -207,7 +207,7 @@ function ProductInfo() {
             <h2 className="productinfo__descriptionlabel">From the Manufacturer</h2>
             <div className="productinfo__description">
 
-                <img className="productinfo__descriptionimage" src={item.thumbnail} />
+                <img className="productinfo__descriptionimage" src={item.images[0]} />
                 <p className="productinfo__descriptiontext">{item.description}</p>
 
             </div>

@@ -13,7 +13,7 @@ export default props => {
     const [{ basket, loggedinuser }, dispatch] = useStateValue()
     const fetchData = async () => {
 
-        return await fetch(`https://dummyjson.com/products/categories`)
+        return await fetch(`https://dummyjson.com/products/category-list`)
             .then((response) => response.json())
             .then((data) => setCategory(data))
     }

@@ -78,7 +78,7 @@ function Header() {
         < nav className="header" >
 
             <Link to='/' className="onhover">
-                <img className="header__logo" alt="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" onClick={() => setSearchText("")} />
+                <img className="header__logo" alt="logo" src="https://i.postimg.cc/1RBJrgxg/klipartz-com.png" onClick={() => setSearchText("")} />
             </Link>
             <div className="header__address onhover">
                 <LocationOnIcon />
