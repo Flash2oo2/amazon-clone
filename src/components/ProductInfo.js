@@ -23,7 +23,7 @@ function ProductInfo() {
     const fetchData = async () => {
         setTimeout(() => {
             setTrigger(true);
-        }, "1000")
+        }, "3000")
         return await fetch(`https://dummyjson.com/products/${id}`)
             .then((response) => response.json())
             .then((data) => {
@@ -35,7 +35,7 @@ function ProductInfo() {
         fetchData();
 
 
-    }, [])
+    }, [trigger])
 
     const [toggle, setToggle] = useState(0);
     useEffect(() => {
@@ -211,7 +211,7 @@ function ProductInfo() {
                 <p className="productinfo__descriptiontext">{item.description}</p>
 
             </div>
-        </div>
+        </div >
     )
 }
 
